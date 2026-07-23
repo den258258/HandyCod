@@ -12,6 +12,8 @@ app.post('/api/track', (req, res) => {
   const ip = req.headers['x-forwarded-for']?.split(',')[0].trim()
              || req.socket.remoteAddress;
 
+
+  
   const visitorData = {
     ip,
     userAgent: req.body.userAgent,
